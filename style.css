@@ -189,9 +189,31 @@ ul { list-style: none; }
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
+  flex-shrink: 0;
 }
+
+.logo-img {
+  height: 44px;
+  width: auto;
+  mix-blend-mode: screen;
+  filter: brightness(1.05);
+  transition: opacity 0.25s, transform 0.3s;
+  display: block;
+}
+.nav-logo:hover .logo-img { opacity: 0.88; transform: scale(1.03); }
+
+.logo-img--footer {
+  height: 52px;
+}
+
+.footer-logo-link {
+  display: inline-block;
+  line-height: 0;
+}
+
+/* legacy text-logo rules kept for safety, hidden */
+.logo-icon, .logo-text, .logo-title, .logo-sub { display: none; }
 
 .logo-icon {
   font-size: 1.6rem;
